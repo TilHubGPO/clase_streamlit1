@@ -52,14 +52,16 @@ st.write("""
 # Graficamos una tabla
 st.table(df.head())
 
-sex = ['Hombres', 'Mujeres']
-survivors = [109, 233] 
+survivors = df[df["Survived"] == 1]
+counts = survivors["Sex"].value_counts()
 
-plt.figure(figsize=(6,4))
-plt.bar(sex, survivors, color=['steelblue', 'lightcoral'])
-plt.title('Sobrevivientes por sexo')
-plt.xlabel('Sexo')
-plt.ylabel('Número de sobrevivientes')
-plt.grid(axis='y', linestyle='--', alpha=0.5)
+hombres = counts.get("male", 0)
+muejres = counts.get("female", 0)
 
-plt.show()
+fig, ax = plt.subplots()
+ax.bar(["Hombres", "mujeres"], [hombres, mujeres],
+       color=["blue", "pink"])
+ax.set_title("Sobrevivientes por sexo")
+ax.set_ylabel("Cantidad")
+
+st.pyplot(fig)
