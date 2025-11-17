@@ -53,18 +53,15 @@ st.write("""
 st.table(df.head())
 
 survivors = df[df["Survived"] == 1]
-counts = survivors["Sex"].value_counts()
 
+counts = survivors ["Sex"].value_counts()
 hombres = counts.get("male", 0)
 mujeres = counts.get("female", 0)
 
-fig, ax = plt.subplots()
-ax.bar(["hombres", "mujeres"], [hombres, mujeres],
-       color=["blue", "pink"])
-ax.set_title("Sobrevivientes por sexo")
-ax.set_ylabel("Cantidad")
+st.sidebar.header("Opciones del grafico")
 
-st.pyplot(fig)
+color_hombres = st.sidebar.color_picket("Color hombres", "#0000FF")
+color_mujeres = st.sidebar.color_picket("Color mujeres", "FFC0CB")
 
 orden = st.sidebar.radio(
     "Orden de las barras",
