@@ -51,3 +51,15 @@ st.write("""
 """)
 # Graficamos una tabla
 st.table(df.head())
+
+sex = ['Hombres', 'Mujeres'].value_count
+survivors = [109, 233] 
+
+plt.figure(figsize=(6,4))
+plt.bar(sex, survivors, color=['steelblue', 'lightcoral'])
+plt.title('Sobrevivientes por sexo')
+plt.xlabel('Sexo')
+plt.ylabel('Número de sobrevivientes')
+plt.grid(axis='y', linestyle='--', alpha=0.5)
+
+plt.show()
