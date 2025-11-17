@@ -66,7 +66,7 @@ ax.set_ylabel("Cantidad")
 
 st.pyplot(fig)
 
-st.sidebar.radio(
+orden == st.sidebar.radio(
     "Orden de las barras",
     ("Hombres primero", "Mujeres primero")
     )
