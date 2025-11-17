@@ -76,3 +76,11 @@ else:
     labels = ["Mujeres", "Hombres"]
     valores = [mujeres, hombres]
     colores = [color_mujeres, color_hombres]
+
+fig, ax = plt.subplots()
+ax.bar(labels, valores, color=colores)
+
+ax.set_title("Sobrevivientes por sexo")
+ax.set_ylabel("Cantidad")
+
+st.pyplot(fig)
