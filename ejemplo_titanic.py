@@ -52,7 +52,7 @@ st.write("""
 # Graficamos una tabla
 st.table(df.head())
 
-sex = ['Hombres', 'Mujeres'].value_count
+sex = ['Hombres', 'Mujeres']
 survivors = [109, 233] 
 
 plt.figure(figsize=(6,4))
