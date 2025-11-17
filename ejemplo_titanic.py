@@ -68,7 +68,7 @@ st.pyplot(fig)
 
 st.sidebar.radio(
     "Orden de las barras",
-    ("Hombres primero", "Mujeres primero)
+    ("Hombres primero", "Mujeres primero")
     )
     
 if orden == "Hombres primero":
