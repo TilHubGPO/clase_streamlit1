@@ -65,3 +65,17 @@ ax.set_title("Sobrevivientes por sexo")
 ax.set_ylabel("Cantidad")
 
 st.pyplot(fig)
+
+st.sidebar.radio(
+    "Orden de las barras",
+    ("Hombres primero", "Mujeres primero)
+    )
+    
+if orden == "Hombres primero":
+    labels = ["Hombres" , "Mujeres"]
+    valores = [hombres, mujeres]
+    colores = [color_hombres, color_mujeres]
+else:
+    labels = ["Mujeres", "Hombres"]
+    valores = [mujeres, hombres]
+    colores = [color_mujeres, color_hombres]
