@@ -56,10 +56,10 @@ survivors = df[df["Survived"] == 1]
 counts = survivors["Sex"].value_counts()
 
 hombres = counts.get("male", 0)
-muejres = counts.get("female", 0)
+mujeres = counts.get("female", 0)
 
 fig, ax = plt.subplots()
-ax.bar(["Hombres", "mujeres"], [hombres, mujeres],
+ax.bar(["hombres", "mujeres"], [hombres, mujeres],
        color=["blue", "pink"])
 ax.set_title("Sobrevivientes por sexo")
 ax.set_ylabel("Cantidad")
