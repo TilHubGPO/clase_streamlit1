@@ -60,8 +60,8 @@ mujeres = counts.get("female", 0)
 
 st.sidebar.header("Opciones del grafico")
 
-color_hombres = st.sidebar.color_picket("Color hombres", "#0000FF")
-color_mujeres = st.sidebar.color_picket("Color mujeres", "FFC0CB")
+color_hombres = st.sidebar.color_picker("Color hombres", "#0000FF")
+color_mujeres = st.sidebar.color_picker("Color mujeres", "FFC0CB")
 
 orden = st.sidebar.radio(
     "Orden de las barras",
